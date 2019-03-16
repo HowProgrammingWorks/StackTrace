@@ -1,2 +1,1 @@
-# StackTrace
-Stack Trace problem in Node.js
+## Stack Trace problem in Node.js
