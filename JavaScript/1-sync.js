@@ -4,7 +4,9 @@ const fs = require('fs');
 
 const f1 = () => {
   setTimeout(() => {
-    fs.readFile('file.ext');
+    fs.readFile('file.ext', (err) => {
+      throw err;
+    });
   }, 0);
 };
 
@@ -13,6 +15,6 @@ const f3 = () => f2();
 
 try {
   f3();
-} catch (e) {
-  console.log('Catch', e);
+} catch (err) {
+  console.log('Catch', err);
 }

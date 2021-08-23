@@ -4,8 +4,9 @@ const fs = require('fs');
 
 const f1 = async () => {
   setTimeout(() => {
-    fs.promises.readFile().catch(e => {
-      console.log('Catch 2', e);
+    fs.promises.readFile().catch((err) => {
+      //throw err;
+      console.log('Catch 2', err);
     });
   }, 0);
 };
@@ -16,7 +17,7 @@ const f3 = async () => await f2();
 (async () => {
   try {
     await f3();
-  } catch (e) {
-    console.log('Catch 1', e);
+  } catch (err) {
+    console.log('Catch 1', err);
   }
 })();
