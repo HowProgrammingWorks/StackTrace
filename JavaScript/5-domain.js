@@ -1,6 +1,6 @@
 'use strict';
 
-const domain = require('domain');
+const domain = require('node:domain');
 
 const d = domain.create();
 
