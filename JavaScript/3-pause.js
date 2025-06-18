@@ -11,10 +11,12 @@ const f2 = async () => await f1();
 
 const f3 = async () => await f2();
 
-(async () => {
+const main = async () => {
   try {
     await f3();
   } catch (err) {
     console.log('Catch 1', err);
   }
-})();
+};
+
+main();
